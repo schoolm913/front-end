@@ -14,11 +14,14 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Local imports
 //--------------------------------------------------------------------------------------------------------------------------
 import { SearchComponent } from "../search/search.component";
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { AvatarComponent } from "../avatar/avatar.component";
 
 @Component({
   selector: 'app-toolbar',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, SearchComponent],
+  imports: [MatIconModule, MatButtonModule, SearchComponent, AvatarComponent],
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss'
 })
@@ -56,7 +59,7 @@ export class ToolbarComponent implements OnInit, OnChanges {
   //--------------------------------------------------------------------------------------------------------------------------
 
   // clear input
-  public clearInput() {
+  public toggleFullscreen() {
     this.inputValue.setValue("");
   }
 }

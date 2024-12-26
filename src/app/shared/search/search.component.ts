@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------------------------
 // Angular imports
 //--------------------------------------------------------------------------------------------------------------------------
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -11,13 +11,15 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, MatIconModule, MatButtonModule, MatInputModule],
+  imports: [ReactiveFormsModule, FormsModule, MatIconModule, MatButtonModule, MatInputModule, MatFormFieldModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
 })
