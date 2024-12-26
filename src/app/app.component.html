@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<!-- Splash screen -->
+@if (isLoading) {
+<app-splash-screen></app-splash-screen>
+} @else {
+<ng-container>
+    <!-- <router-outlet></router-outlet> -->
+    <app-toolbar></app-toolbar>
+</ng-container>
+}
+<!-- Main -->
