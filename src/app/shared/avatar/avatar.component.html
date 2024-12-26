@@ -1,0 +1,12 @@
+<div class="flex items-center justify-center rounded-full uppercase overflow-hidden border-black" [ngStyle]="{
+    'width.px': size, 
+    'height.px': size, 
+    'background-color': imageUrl ? 'transparent' : backgroundColor,
+    'color': textColor
+  }">
+    @if (imageUrl) {
+    <img [src]="imageUrl" [alt]="name" class="w-full h-full" />
+    } @else {
+    <span class="avatar-initials">{{ initials }}</span>
+    }
+</div>
