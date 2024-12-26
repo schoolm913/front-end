@@ -24,6 +24,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SplashScreenComponent } from "./shared/splash-screen/splash-screen.component";
 import { ToolbarComponent } from "./shared/toolbar/toolbar.component";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ToolbarComponent } from "./shared/toolbar/toolbar.component";
     ToolbarComponent
 ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
