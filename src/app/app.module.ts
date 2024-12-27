@@ -25,6 +25,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { SplashScreenComponent } from "./shared/splash-screen/splash-screen.component";
 import { ToolbarComponent } from "./shared/toolbar/toolbar.component";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AvatarComponent } from './shared/avatar/avatar.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatIconModule,
     MatListModule,
     SplashScreenComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    AvatarComponent
 ],
   providers: [
     provideClientHydration(),

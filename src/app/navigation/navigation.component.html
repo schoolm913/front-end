@@ -5,18 +5,41 @@
       [opened]="(isHandset$ | async) === false" [ngStyle]="{'width': collabseSideBarWidth()}"
       (openedChange)="onSidenavOpenedChange($event)"
       (closedStart)='onSidenavClosedStart()'>
-    <mat-toolbar>
-      <button mat-icon-button (click)="this.collabseSideBar.set(!this.collabseSideBar())">
-        <mat-icon>
-          menu
-        </mat-icon>
-      </button>
+    <mat-toolbar style="height:200px; background-color: red;" [ngStyle]="{'width': collabseSideBarWidth()}">
+      <div style="height: 100%; width: 100%; display: flex; flex-direction: column;">
+      <div style="height: 64px; width: 100%; display: flex; align-items: flex-end; flex-direction: row;">
+        <div style="width: 100%;">
+
+        </div>
+        <div style="width: 64px;">
+          @if(isHandset$ | async){
+            <button mat-icon-button (click)="this.collabseSideBar.set(!this.collabseSideBar())">
+              <mat-icon class="material-symbos-out">
+                arrow_back
+              </mat-icon>
+            </button>
+          } @else {
+            <button mat-icon-button (click)="this.collabseSideBar.set(!this.collabseSideBar())">
+              <mat-icon>
+                menu
+              </mat-icon>
+            </button>
+          }
+        </div>
+      </div>
+      <div style="width: 100%; height: 100%;">
+        <app-avatar [name]="'Ram sankar'"></app-avatar>
+      </div>
+    </div>
     </mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
-    </mat-nav-list>
+    @for (item of menu; track $index) {
+      <mat-nav-list>
+        <a mat-list-item href="item.path">
+          <mat-icon [style.width]="'64px'">{{item.icon}}</mat-icon>
+          <span>{{item.name}}</span>
+        </a>
+      </mat-nav-list>
+    }
   </mat-sidenav>
   <mat-sidenav-content [ngStyle]="{'margin-left': collabseSideBarWidth()}">
     <mat-toolbar color="primary" class='content-toolbar'>
@@ -28,6 +51,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+      <app-toolbar></app-toolbar>
     </mat-toolbar>
     <router-outlet></router-outlet>
     <!-- Add Content Here -->

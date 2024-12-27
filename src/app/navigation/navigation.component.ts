@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay, tap } from 'rxjs/operators';
 import { AsyncPipe, NgIf } from '@angular/common';
+import { AvatarComponent } from '../shared/avatar/avatar.component';
 
 @Component({
   selector: 'app-navigation',
@@ -21,7 +22,8 @@ export class NavigationComponent {
       subMenu: [
         {
           name: 'Dashboard',
-          icon: 'home'
+          icon: 'home',
+          path: ''
         }
       ]
     }
@@ -30,7 +32,6 @@ export class NavigationComponent {
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
-      tap(matches => console.log('Breakpoint Handset matches:', matches)),
       shareReplay()
     );
 
@@ -39,7 +40,7 @@ export class NavigationComponent {
     }
 
     public onSidenavClosedStart(){
-      
+
     }
 
 }
