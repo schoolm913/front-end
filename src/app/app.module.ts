@@ -26,12 +26,13 @@ import { SplashScreenComponent } from "./shared/splash-screen/splash-screen.comp
 import { ToolbarComponent } from "./shared/toolbar/toolbar.component";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AvatarComponent } from './shared/avatar/avatar.component';
-
+import { UserPanelComponent } from './navigation/user-panel/user-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
+    UserPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +46,7 @@ import { AvatarComponent } from './shared/avatar/avatar.component';
     SplashScreenComponent,
     ToolbarComponent,
     AvatarComponent
+    
 ],
   providers: [
     provideClientHydration(),

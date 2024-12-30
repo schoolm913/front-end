@@ -7,6 +7,6 @@
     @if (imageUrl) {
     <img [src]="imageUrl" [alt]="name" class="w-full h-full" />
     } @else {
-    <span class="avatar-initials">{{ initials }}</span>
+    <span class="avatar-initials" [ngStyle]="{'font-size.px': this.fontSize}">{{ initials }}</span>
     }
 </div>

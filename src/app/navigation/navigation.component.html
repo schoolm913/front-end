@@ -5,38 +5,47 @@
       [opened]="(isHandset$ | async) === false" [ngStyle]="{'width': collabseSideBarWidth()}"
       (openedChange)="onSidenavOpenedChange($event)"
       (closedStart)='onSidenavClosedStart()'>
-    <mat-toolbar style="height:200px; background-color: red;" [ngStyle]="{'width': collabseSideBarWidth()}">
-      <div style="height: 100%; width: 100%; display: flex; flex-direction: column;">
-      <div style="height: 64px; width: 100%; display: flex; align-items: flex-end; flex-direction: row;">
-        <div style="width: 100%;">
-
-        </div>
-        <div style="width: 64px;">
-          @if(isHandset$ | async){
-            <button mat-icon-button (click)="this.collabseSideBar.set(!this.collabseSideBar())">
-              <mat-icon class="material-symbos-out">
-                arrow_back
-              </mat-icon>
-            </button>
-          } @else {
-            <button mat-icon-button (click)="this.collabseSideBar.set(!this.collabseSideBar())">
-              <mat-icon>
-                menu
-              </mat-icon>
-            </button>
-          }
-        </div>
-      </div>
-      <div style="width: 100%; height: 100%;">
-        <app-avatar [name]="'Ram sankar'"></app-avatar>
-      </div>
-    </div>
+    <mat-toolbar style="height: 64px; width: 100%; display: flex; align-items: flex-end; flex-direction: row; background-color: blue;">
+      <!-- <div style="display: flex; flex-direction: column; width: 100%; height: 100%; align-items: flex-start;">         -->
+        <!-- <div style="height: 64px; width: 100%; display: flex; align-items: flex-end; flex-direction: row; background-color: blue;"> -->
+          <div style="flex:1; height: 100%; background-color: brown; display: flex;" [ngStyle]="{'flex-direction': this.collabseSideBar() ? 'column' : 'row'}">
+            <div style="width: 64px; height: 100%; background-color: green; display: flex; justify-content: center; align-items: center;">
+              <img src=""/>
+            </div>
+            @if(!collabseSideBar()){
+            <div style="flex: 1; height: 100%; display: flex; justify-content: flex-start; align-items: center;">
+              <h6>company name</h6>
+            </div>
+            }
+          </div>
+          <div style="width: 64px; height: 100%; background-color: green; display: flex; justify-content: center; align-items: center;">
+            @if(isHandset$ | async){
+              <button mat-icon-button (click)="drawer.toggle()">
+                <mat-icon class="material-symbos-out">
+                  arrow_back
+                </mat-icon>
+              </button>
+            } @else {
+              <button mat-icon-button (click)="this.collabseSideBar.set(!this.collabseSideBar())">
+                <mat-icon>
+                  menu
+                </mat-icon>
+              </button>
+            }
+          </div>
+        <!-- </div> -->
+      <!-- </div> -->
     </mat-toolbar>
+    <div style="width: 100%; margin-top: 8px; padding-left: 8px; padding-right: 8px; box-sizing: border-box;">
+      <app-user-panel [collapsed]="this.collabseSideBar()"></app-user-panel>
+    </div>
     @for (item of menu; track $index) {
       <mat-nav-list>
         <a mat-list-item href="item.path">
-          <mat-icon [style.width]="'64px'">{{item.icon}}</mat-icon>
-          <span>{{item.name}}</span>
+          <div style="display: flex; align-items: center;">
+            <mat-icon [style.width]="'64px'">{{item.icon}}</mat-icon>
+            <span>{{item.name}}</span>
+          </div>
         </a>
       </mat-nav-list>
     }

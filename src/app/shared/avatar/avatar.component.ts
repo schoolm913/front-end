@@ -18,6 +18,13 @@ export class AvatarComponent {
 
   initials: string = '';
   backgroundColor: string = '#6c757d'; // Default background color
+  public fontSize: number = 33;
+
+  ngChanges(){
+    if(this.size){
+      this.fontSize = (Math.round(this.size/3) + Math.round(this.size/4))
+    }
+  }
 
   ngOnInit(): void {
     this.generateInitials();

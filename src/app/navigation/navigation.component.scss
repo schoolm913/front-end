@@ -5,13 +5,15 @@
 .sidenav {
   box-shadow: rgba(0, 0, 0, 0.2) 5px 0px 5px -2px;
   border-radius: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidenav:hover {
-  width: 250px !important;
+  width: 280px !important;
 
   mat-toolbar{
-    width: 250px !important;
+    width: 280px !important;
   }
 }
 

@@ -14,7 +14,7 @@ import { AvatarComponent } from '../shared/avatar/avatar.component';
 export class NavigationComponent {
   private breakpointObserver = inject(BreakpointObserver);
   public collabseSideBar: WritableSignal<boolean> = signal(false);
-  public collabseSideBarWidth: Signal<string> = computed(() => this.collabseSideBar() ? '64px' : '250px');
+  public collabseSideBarWidth: Signal<string> = computed(() => this.collabseSideBar() ? '64px' : '280px');
   public menu = [
     {
       name: 'Home',
