@@ -12,7 +12,7 @@
 .sidenav:hover {
   width: 280px !important;
 
-  mat-toolbar{
+  mat-toolbar {
     width: 280px !important;
   }
 }
@@ -29,9 +29,63 @@
   z-index: 1;
 }
 
-.content-toolbar{
+.content-toolbar {
   height: 64px;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .4);
 }
 
 
+
+.side-main-menu-toolbar {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .4);
+
+  .comapany-detail-container {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .company-logo-container {
+      width: 64px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .company-profile {
+        border-radius: 20px;
+      }
+    }
+
+    .company-name-container {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  .close-open-button-container {
+    width: 64px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px -3px 3px 3px rgba(0, 0, 0, 0.4);
+    margin-left: 4px;
+  }
+}
+
+.side-bar-content-container {
+  width: 100%;
+  margin-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-sizing: border-box;
+}

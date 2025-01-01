@@ -16,10 +16,19 @@
   }
 }
 
+.user-panel-avatar-container{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
 // Set default width and height can avoid flashing before avatar image loaded.
 .user-panel-avatar {
-  width: 3rem;
-  height: 3rem;
+  // width: 3rem;
+  // height: 3rem;
   border-radius: 50rem;
   transition: transform mat.$private-swift-ease-out-duration mat.$private-swift-ease-out-timing-function;
   transform-origin: 0 1.5rem;
@@ -29,8 +38,16 @@
   }
 }
 
+// .display-colapsed-avatar{
+//   display: none;
+// }
+
+// .display-full-avatar{
+//   display: none;
+// }
+
 .user-panel-info {
-  flex: 1;
+  flex: 2;
   width: 0;
   margin-left: 0.75rem;
   opacity: 1;

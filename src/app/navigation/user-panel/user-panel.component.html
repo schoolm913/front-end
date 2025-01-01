@@ -1,8 +1,12 @@
 <div class="user-panel" routerLink="/profile/overview">
-  <img class="user-panel-avatar" src="assets/test.jpg" alt="avatar" width="75%">
-  <!-- <app-avatar class="user-panel-avatar" [name]="'Ram sankar'" [size]="64"></app-avatar> -->
-  <div class="user-panel-info">
-    <h4>name</h4>
-    <h5>Email</h5>
+  <div class="user-panel-avatar-container">
+    <!-- <app-avatar [ngClass]="{'colabsed-avatar': collapsed, 'display-colapsed-avatar': !collapsed}" [name]="'Ram sankar'" [size]="36" [imageUrl]="'assets/test.jpg'"></app-avatar> -->
+    <app-avatar [name]="'Ram sankar'" [size]="72" [imageUrl]="'assets/test.jpg'"></app-avatar>
   </div>
+  <!-- @if(!collapsed){ -->
+    <div class="user-panel-info">
+      <h4>name</h4>
+      <h5>Email</h5>
+    </div>
+  <!-- } -->
 </div>
