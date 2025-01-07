@@ -1,0 +1,71 @@
+<mat-accordion multi="false">
+    <mat-expansion-panel
+      *ngFor="let menu of menuList; let ind = index"
+      [expanded]="false"
+      (opened)="openOrClose(ind)"
+      (closed)="openOrClose(ind)"
+      hideToggle
+      [disabled]="!menu.subMenu"
+      class="main-expansion-panel"
+    >
+      <mat-expansion-panel-header class="main-header" ngClass="activeMenu: [isActive('/home')]">
+        @if(menu.subMenu && menu.subMenu.length){
+            <div class="link-content">
+                <div class="icon-container">
+                    <mat-icon class="material-symbos-out">
+                        {{menu.icon}}
+                    </mat-icon>
+                </div>
+                <span style="flex: 1">
+                    {{ menu.name }}
+                </span>
+                <div style="height: 100%; width: 54px; display: flex; align-items: center; justify-content: center;">
+                    <mat-icon>{{ !menu.expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+                </div>
+            </div>
+        } @else {
+            <a class="link" routerLinkActive="active"  [routerLink]="menu.path">
+                <div class="link-content">
+                    <div class="icon-container">
+                        <mat-icon class="material-symbos-out">
+                            {{menu.icon}}
+                        </mat-icon>
+                    </div>
+                    <span>
+                        {{ menu.name }}
+                    </span>
+                </div>
+            </a>
+        }
+      </mat-expansion-panel-header>
+      <mat-panel-description class="mat-panel-description" *ngIf="menu.subMenu">
+        <mat-expansion-panel
+          *ngFor="let subMenu of menu.subMenu"
+          [expanded]="false"
+          (opened)="subpanel = true"
+          (closed)="subpanel = false"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <!-- {{subMenu.name}} -->
+            <a class="link" routerLinkActive="active"  [routerLink]="subMenu.path">
+                <div class="link-content">
+                    <div class="icon-container">
+                        <mat-icon class="material-symbos-out">
+                            {{subMenu.icon}}
+                        </mat-icon>
+                    </div>
+                    <span>
+                        {{ subMenu.name }}
+                    </span>
+                </div>
+            </a>
+          </mat-expansion-panel-header>
+          <!-- <mat-panel-description>
+            {{ post.content }}
+          </mat-panel-description> -->
+        </mat-expansion-panel>
+      </mat-panel-description>
+    </mat-expansion-panel>
+  </mat-accordion>
+  

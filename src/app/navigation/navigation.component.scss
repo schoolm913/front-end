@@ -11,10 +11,6 @@
 
 .sidenav:hover {
   width: 280px !important;
-
-  mat-toolbar {
-    width: 280px !important;
-  }
 }
 
 .sidenav .mat-toolbar {
@@ -88,4 +84,14 @@
   padding-left: 8px;
   padding-right: 8px;
   box-sizing: border-box;
+}
+
+mat-sidenav div.mat-drawer-inner-container {
+  overflow: hidden !important;
+  background-color: yellow !important;
+}
+
+
+.active{
+  background-color: blue;
 }

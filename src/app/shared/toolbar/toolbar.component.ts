@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------------------------------------------------------
 // Angular imports
 //--------------------------------------------------------------------------------------------------------------------------
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, NgModule, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -17,11 +17,12 @@ import { SearchComponent } from "../search/search.component";
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { AvatarComponent } from "../avatar/avatar.component";
+import { FullScreenComponent } from '../full-screen/full-screen.component';
 
 @Component({
   selector: 'app-toolbar',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, SearchComponent, AvatarComponent],
+  imports: [MatIconModule, MatButtonModule, SearchComponent, AvatarComponent, FullScreenComponent],
   templateUrl: './toolbar.component.html',
   styleUrl: './toolbar.component.scss'
 })

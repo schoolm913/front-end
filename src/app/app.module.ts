@@ -27,6 +27,9 @@ import { ToolbarComponent } from "./shared/toolbar/toolbar.component";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AvatarComponent } from './shared/avatar/avatar.component';
 import { UserPanelComponent } from './navigation/user-panel/user-panel.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { FullScreenComponent } from './shared/full-screen/full-screen.component';
+import { SidebarMenuListComponent } from './navigation/sidebar-menu-list/sidebar-menu-list.component';
 
 @NgModule({
   declarations: [
@@ -45,13 +48,15 @@ import { UserPanelComponent } from './navigation/user-panel/user-panel.component
     MatListModule,
     SplashScreenComponent,
     ToolbarComponent,
-    AvatarComponent
-    
+    AvatarComponent,
+    MatExpansionModule,
+    SidebarMenuListComponent
 ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[]
 })
 export class AppModule { }
