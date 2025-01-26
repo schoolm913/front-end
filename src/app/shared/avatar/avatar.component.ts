@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-avatar',
@@ -18,11 +18,11 @@ export class AvatarComponent {
 
   initials: string = '';
   backgroundColor: string = '#6c757d'; // Default background color
-  public fontSize: number = 33;
+  public fontSize!: number;
 
-  ngChanges(){
-    if(this.size){
-      this.fontSize = (Math.round(this.size/3) + Math.round(this.size/4))
+  ngChanges(changes: SimpleChanges){
+      if (changes['size']) {
+      this.fontSize = (Math.round(this.size/3) + Math.round(this.size/4));
     }
   }
 
@@ -30,6 +30,9 @@ export class AvatarComponent {
     this.generateInitials();
     if (!this.imageUrl) {
       this.backgroundColor = this.generateHashColor(this.name);
+    }
+    if(!this.fontSize){
+      this.fontSize = (Math.round(this.size/3) + Math.round(this.size/4));
     }
   }
 

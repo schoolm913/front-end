@@ -18,7 +18,6 @@ export class NavigationComponent {
   public collabseSideBarWidth: Signal<string> = computed(() => this.collabseSideBar() ? '64px' : '280px');
   public menuList: Menu[] = [
     {
-      id: 1,
       name: 'Home',
       icon: 'home',
       path: ['/home1', '/dashboard1'],
@@ -33,7 +32,6 @@ export class NavigationComponent {
       // ]
     },
     {
-      id: 2,
       name: 'Home',
       icon: 'home',
       path: ['/home'],
@@ -53,7 +51,7 @@ export class NavigationComponent {
       parentPath: "activeMenu: [isActive('/dsfs1'), isActive('/home')]"
     },
     {
-      id: 3,
+
       name: 'Home',
       icon: 'home',
       path: ['/home1'],
@@ -72,7 +70,6 @@ export class NavigationComponent {
       ]
     },
     {
-      id: 3,
       name: 'Home',
       icon: 'home',
       path: ['/home1'],
@@ -91,7 +88,7 @@ export class NavigationComponent {
       ]
     },
     {
-      id: 3,
+
       name: 'Home',
       icon: 'home',
       path: ['/home1'],
@@ -110,7 +107,7 @@ export class NavigationComponent {
       ]
     },
     {
-      id: 3,
+
       name: 'Home',
       icon: 'home',
       path: ['/home1'],
@@ -129,7 +126,7 @@ export class NavigationComponent {
       ]
     },
     {
-      id: 3,
+
       name: 'Home',
       icon: 'home',
       path: ['/home1'],
@@ -148,7 +145,7 @@ export class NavigationComponent {
       ]
     },
     {
-      id: 3,
+
       name: 'Home',
       icon: 'home',
       path: ['/home1'],
@@ -167,7 +164,7 @@ export class NavigationComponent {
       ]
     },
     {
-      id: 3,
+
       name: 'Home',
       icon: 'home',
       path: ['/home1'],
