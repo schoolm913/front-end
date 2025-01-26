@@ -29,7 +29,9 @@
       </div>
     </mat-toolbar>
     <div class="side-bar-content-container" cdkscrollable>
-      <app-user-panel [collapsed]="this.collabseSideBar()"></app-user-panel>
+      <div class="user-panel-container">
+        <app-user-panel [collapsed]="this.collabseSideBar()"></app-user-panel>
+      </div>
       <app-sidebar-menu-list [menuList]="menuList"></app-sidebar-menu-list>
 
    </div>

@@ -87,5 +87,9 @@ mat-expansion-panel.main-expansion-panel.mat-expanded{
 }
 
 .activeMenu{
-    color: green !important;
+    background-color: rgb(194 192 192 / 44%);
+}
+
+::ng-deep .mat-expansion-indicator{
+    margin-right: 20px !important;
 }

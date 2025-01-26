@@ -18,10 +18,11 @@ export class NavigationComponent {
   public collabseSideBarWidth: Signal<string> = computed(() => this.collabseSideBar() ? '64px' : '280px');
   public menuList: Menu[] = [
     {
+      id: 1,
       name: 'Home',
       icon: 'home',
-      path: ['/home1'],
-      expanded: true
+      path: ['/home1', '/dashboard1'],
+       expanded: false
       // ,
       // subMenu: [
       //   {
@@ -32,10 +33,11 @@ export class NavigationComponent {
       // ]
     },
     {
+      id: 2,
       name: 'Home',
       icon: 'home',
-      path: [],
-      expanded: true,
+      path: ['/home'],
+       expanded: false,
       subMenu: [
         {
           name: 'Dashboard',
@@ -51,10 +53,125 @@ export class NavigationComponent {
       parentPath: "activeMenu: [isActive('/dsfs1'), isActive('/home')]"
     },
     {
+      id: 3,
       name: 'Home',
       icon: 'home',
-      path: [],
-      expanded: true,
+      path: ['/home1'],
+       expanded: false,
+      subMenu: [
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/dsfs1']
+        },
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/home1']
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: 'Home',
+      icon: 'home',
+      path: ['/home1'],
+       expanded: false,
+      subMenu: [
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/dsfs1']
+        },
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/home1']
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: 'Home',
+      icon: 'home',
+      path: ['/home1'],
+       expanded: false,
+      subMenu: [
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/dsfs1']
+        },
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/home1']
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: 'Home',
+      icon: 'home',
+      path: ['/home1'],
+       expanded: false,
+      subMenu: [
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/dsfs1']
+        },
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/home1']
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: 'Home',
+      icon: 'home',
+      path: ['/home1'],
+       expanded: false,
+      subMenu: [
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/dsfs1']
+        },
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/home1']
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: 'Home',
+      icon: 'home',
+      path: ['/home1'],
+       expanded: false,
+      subMenu: [
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/dsfs1']
+        },
+        {
+          name: 'Dashboard',
+          icon: 'home',
+          path: ['/home1']
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: 'Home',
+      icon: 'home',
+      path: ['/home1'],
+       expanded: false,
       subMenu: [
         {
           name: 'Dashboard',

@@ -1,14 +1,14 @@
 <mat-accordion multi="false">
     <mat-expansion-panel
       *ngFor="let menu of menuList; let ind = index"
-      [expanded]="false"
-      (opened)="openOrClose(ind)"
-      (closed)="openOrClose(ind)"
-      hideToggle
-      [disabled]="!menu.subMenu"
+      [expanded]="this.currentRoute === menu.path[0].split('/')[1]"
+      [hideToggle]="!menu.subMenu"
       class="main-expansion-panel"
-    >
-      <mat-expansion-panel-header class="main-header" ngClass="activeMenu: [isActive('/home')]">
+      >
+      <!-- (opened)="openOrClose(menu)" -->
+    <!-- [disabled]="!menu.subMenu" -->
+    <!-- (closed)="openOrClose(menu)" -->
+      <mat-expansion-panel-header class="main-header" [ngClass]="{'activeMenu': this.currentRoute === menu.path[0].split('/')[1]}">
         @if(menu.subMenu && menu.subMenu.length){
             <div class="link-content">
                 <div class="icon-container">
@@ -19,9 +19,9 @@
                 <span style="flex: 1">
                     {{ menu.name }}
                 </span>
-                <div style="height: 100%; width: 54px; display: flex; align-items: center; justify-content: center;">
+                <!-- <div style="height: 100%; width: 54px; display: flex; align-items: center; justify-content: center;">
                     <mat-icon>{{ !menu.expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
-                </div>
+                </div> -->
             </div>
         } @else {
             <a class="link" routerLinkActive="active"  [routerLink]="menu.path">
@@ -38,7 +38,8 @@
             </a>
         }
       </mat-expansion-panel-header>
-      <mat-panel-description class="mat-panel-description" *ngIf="menu.subMenu">
+      <mat-panel-description class="mat-panel-description"
+       [ngClass]="{'main-expansion-description': (menu.subMenu) ? true : false }">
         <mat-expansion-panel
           *ngFor="let subMenu of menu.subMenu"
           [expanded]="false"
