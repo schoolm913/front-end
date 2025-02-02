@@ -1,9 +1,9 @@
-<div class="flex items-center justify-between p-[16px]">
+<div class="flex items-center justify-between p-[16px] w-full">
     <!-- Search -->
-    <app-search class="w-full"></app-search>
+    <app-search class="w-full" [placeHolder]="searchPlaceHolder" [keyboardShortCut]="keyboardShortCut"></app-search>
 
     <!-- avatar section -->
-    <div class="w-full flex flex-row justify-end">
+    <div class="px-[16px] flex flex-row justify-end">
         <app-avatar [name]="'Ram sankar'"></app-avatar>
     </div>
     <app-full-screen></app-full-screen>

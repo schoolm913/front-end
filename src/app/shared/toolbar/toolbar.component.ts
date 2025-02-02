@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { AvatarComponent } from "../avatar/avatar.component";
 import { FullScreenComponent } from '../full-screen/full-screen.component';
+import { keyboardShortCut } from '../../config/config';
 
 @Component({
   selector: 'app-toolbar',
@@ -31,9 +32,11 @@ export class ToolbarComponent implements OnInit, OnChanges {
   // Output
   @Output() change = new EventEmitter<string>();
 
-
   // public
   public inputValue: FormControl = new FormControl("");
+  public keyboardShortCut = keyboardShortCut.globalSerach;
+  public searchPlaceHolder = 'Search (' + keyboardShortCut.globalSerach + ')'; 
+
 
   //--------------------------------------------------------------------------------------------------------------------------
   // Life cycle hooks

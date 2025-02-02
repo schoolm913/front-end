@@ -30,6 +30,7 @@ import { UserPanelComponent } from './navigation/user-panel/user-panel.component
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FullScreenComponent } from './shared/full-screen/full-screen.component';
 import { SidebarMenuListComponent } from './navigation/sidebar-menu-list/sidebar-menu-list.component';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,11 @@ import { SidebarMenuListComponent } from './navigation/sidebar-menu-list/sidebar
 ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { subscriptSizing: 'dynamic' },
+    },
   ],
   bootstrap: [AppComponent],
   exports:[]
