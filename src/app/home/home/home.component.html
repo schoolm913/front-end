@@ -1,0 +1,19 @@
+<!-- <mat-tab-group [(selectedIndex)]="selectedTabIndex" class="h-fit">
+    <mat-tab *ngFor="let menu of homeMenus; let i = index" [label]="menu.label">
+    </mat-tab>
+</mat-tab-group> -->
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    @for (link of homeMenus; track link) {
+      <a mat-tab-link [routerLink]="link.path"
+      (click)="activeLink = link.path"
+      [active]="activeLink == link.path"
+      > {{link.label}} </a>
+      <!-- (click)="activeLink = link"
+      [active]="activeLink == link" -->
+    }
+    <!-- <a mat-tab-link disabled>Disabled Link</a> -->
+  </nav>
+  <mat-tab-nav-panel #tabPanel>
+
+      <router-outlet></router-outlet>
+  </mat-tab-nav-panel>

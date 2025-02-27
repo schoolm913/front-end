@@ -20,7 +20,7 @@ export class NavigationComponent {
     {
       name: 'Home',
       icon: 'home',
-      path: ['/home1', '/dashboard1'],
+      path: ['/home', '/dashboard'],
        expanded: false
       // ,
       // subMenu: [
@@ -32,154 +32,16 @@ export class NavigationComponent {
       // ]
     },
     {
-      name: 'Home',
+      name: 'Teachers',
       icon: 'home',
-      path: ['/home'],
-       expanded: false,
+      path: ['/teacher'],
+      expanded: false,
       subMenu: [
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/dsfs1']
-        },
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/home']
-        }
-      ],
-      parentPath: "activeMenu: [isActive('/dsfs1'), isActive('/home')]"
-    },
-    {
-
-      name: 'Home',
-      icon: 'home',
-      path: ['/home1'],
-       expanded: false,
-      subMenu: [
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/dsfs1']
-        },
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/home1']
-        }
-      ]
-    },
-    {
-      name: 'Home',
-      icon: 'home',
-      path: ['/home1'],
-       expanded: false,
-      subMenu: [
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/dsfs1']
-        },
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/home1']
-        }
-      ]
-    },
-    {
-
-      name: 'Home',
-      icon: 'home',
-      path: ['/home1'],
-       expanded: false,
-      subMenu: [
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/dsfs1']
-        },
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/home1']
-        }
-      ]
-    },
-    {
-
-      name: 'Home',
-      icon: 'home',
-      path: ['/home1'],
-       expanded: false,
-      subMenu: [
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/dsfs1']
-        },
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/home1']
-        }
-      ]
-    },
-    {
-
-      name: 'Home',
-      icon: 'home',
-      path: ['/home1'],
-       expanded: false,
-      subMenu: [
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/dsfs1']
-        },
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/home1']
-        }
-      ]
-    },
-    {
-
-      name: 'Home',
-      icon: 'home',
-      path: ['/home1'],
-       expanded: false,
-      subMenu: [
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/dsfs1']
-        },
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/home1']
-        }
-      ]
-    },
-    {
-
-      name: 'Home',
-      icon: 'home',
-      path: ['/home1'],
-       expanded: false,
-      subMenu: [
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/dsfs1']
-        },
-        {
-          name: 'Dashboard',
-          icon: 'home',
-          path: ['/home1']
-        }
+      {
+        name: "Teachers",
+        icon: 'home',
+        path: ['/teachers']
+      }
       ]
     }
   ]

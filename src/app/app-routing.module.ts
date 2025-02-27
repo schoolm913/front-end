@@ -13,12 +13,11 @@ import { NavigationComponent } from './navigation/navigation.component';
 const routes: Routes = [
   {
     path: '',
-    component: NavigationComponent,
-    children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) }
-    ]
-  }
+    pathMatch: 'full',
+    redirectTo: 'home'
+  },
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: 'teachers', loadChildren: () => import('./teachers/teachers.module').then(m => m.TeachersModule) }
 ];
 
 @NgModule({
