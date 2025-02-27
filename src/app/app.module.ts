@@ -31,6 +31,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FullScreenComponent } from './shared/full-screen/full-screen.component';
 import { SidebarMenuListComponent } from './navigation/sidebar-menu-list/sidebar-menu-list.component';
 import { HomeModule } from './home/home.module';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,11 @@ import { HomeModule } from './home/home.module';
 ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { subscriptSizing: 'dynamic' },
+    },
   ],
   bootstrap: [AppComponent],
   exports:[]

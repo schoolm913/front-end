@@ -1,9 +1,3 @@
-<mat-form-field class="w-full" appearance="outline">
-    <mat-label>{{placeHolder}}</mat-label>
-    <input matInput type="text" [formControl]="inputValue">
-    @if (inputValue.value) {
-    <button class="m-[8px]" matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
-        <mat-icon>close</mat-icon>
-    </button>
-}
+<mat-form-field class="w-full small" appearance="outline">
+    <input matInput type="text" [formControl]="inputValue" [placeholder]="placeHolder" [ShortCutAction]="'Focus'" [keyboardShortCut]="keyboardShortCut">
 </mat-form-field>
