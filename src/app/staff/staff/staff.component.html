@@ -1,0 +1,7 @@
+<div *ngIf="viewType ==  'list'">
+    <p>staff works!</p>
+    <button mat-raised-button color="primary" routerLink="add">ADD</button>
+</div>
+<div *ngIf="viewType != 'list'">
+    <router-outlet></router-outlet>
+</div>

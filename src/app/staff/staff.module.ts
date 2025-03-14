@@ -1,31 +1,35 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard.component';
+import { StaffRoutingModule } from './staff-routing.module';
+import { StaffComponent } from './staff/staff.component';
+import { StaffAddOrEditComponent } from './staff-add-or-edit/staff-add-or-edit.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
-import {provideNativeDateAdapter} from '@angular/material/core';
 import { MatDatepickerModule} from '@angular/material/datepicker';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatDividerModule} from '@angular/material/divider';
+import { RouterModule } from '@angular/router';
+import { AddDependentDialogComponent } from './staff-add-or-edit/add-dependent-dialog/add-dependent-dialog.component';
+
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    StaffComponent,
+    StaffAddOrEditComponent,
+    AddDependentDialogComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
+    StaffRoutingModule,
 
     MatDatepickerModule, MatAutocompleteModule, MatButtonModule, MatDialogModule, MatDividerModule,
-    MatFormFieldModule, MatInputModule, MatIconModule, MatSelectModule, FormsModule, ReactiveFormsModule
-  ],
-  providers: [provideNativeDateAdapter()]
+    MatFormFieldModule, MatInputModule, MatIconModule, MatSelectModule, FormsModule, ReactiveFormsModule, RouterModule
+  ]
 })
-export class DashboardModule { }
+export class StaffModule { }

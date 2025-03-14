@@ -17,7 +17,7 @@ const routes: Routes = [
     redirectTo: 'home'
   },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
-  { path: 'teachers', loadChildren: () => import('./teachers/teachers.module').then(m => m.TeachersModule) }
+  { path: 'teachers', loadChildren: () => import('./staff/staff.module').then(m => m.StaffModule) }
 ];
 
 @NgModule({

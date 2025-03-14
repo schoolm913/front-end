@@ -8,13 +8,13 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { HomeComponent } from './home/home.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { AnnouncementModule } from './announcement/announcement.module';
-import { TeachersAddEditPageComponent } from './teachers-add-edit-page/teachers-add-edit-page.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    TeachersAddEditPageComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +23,13 @@ import { TeachersAddEditPageComponent } from './teachers-add-edit-page/teachers-
     MatIconModule,
     MatTabsModule,
     DashboardModule,
-    AnnouncementModule
+    AnnouncementModule,
+
+
+    MatFormFieldModule, MatInputModule, MatIconModule,
+
+  ],
+  exports: [
   ]
 })
 export class HomeModule { }

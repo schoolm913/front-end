@@ -1,0 +1,211 @@
+<div class="form-container">
+    <form action="">
+      Basic details
+      <div class="form-fields-container max-sm:flex-col">
+        <!-- Emp id and first name -->
+        <div class="flex-1 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Employee id</mat-label>
+            <!-- placeholder="Placeholder" -->
+            <input matInput>
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+        </div>
+        <div class="flex-1 sm:ml-16 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>First name</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- Emp id and first name -->
+  
+      <!-- last name and blood group -->
+      <div class="form-fields-container max-sm:flex-col">
+        <div class="flex-1 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </div>
+        <div class="flex-1 sm:ml-16 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Blood group</mat-label>
+            <mat-select>
+              <mat-option value="one">A</mat-option>
+              <mat-option value="two">B</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- last name and blood group -->
+  
+      <!-- Date of birth and role -->
+      <div class="form-fields-container max-sm:flex-col">
+        <div class="flex-1 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Date of birth</mat-label>
+            <input matInput [matDatepicker]="picker" />
+            <!-- (dateInput)="addEvent('input', $event)"
+              (dateChange)="addEvent('change', $event)" -->
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+  
+          </mat-form-field>
+        </div>
+        <div class="flex-1 sm:ml-16 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Role</mat-label>
+            <input type="text" aria-label="Number" matInput [matAutocomplete]="roleAuto">
+            <mat-autocomplete #roleAuto="matAutocomplete">
+              <mat-option value="Admin">Admin</mat-option>
+              <mat-option value="Employee">Employee</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- Date of birth and role -->
+  
+      <!-- Employment status and date of joining -->
+      <div class="form-fields-container max-sm:flex-col">
+        <div class="flex-1 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Employment status</mat-label>
+            <mat-select>
+              <mat-option value="one">Active</mat-option>
+              <mat-option value="two">InActive</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="flex-1 sm:ml-16 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Date of joining</mat-label>
+            <input matInput [matDatepicker]="pickerDJ" />
+            <!-- (dateInput)="addEvent('input', $event)"
+                    (dateChange)="addEvent('change', $event)" -->
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="pickerDJ"></mat-datepicker-toggle>
+            <mat-datepicker #pickerDJ></mat-datepicker>
+  
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- Employment status and date of joining-->
+  
+  
+  
+      <!-- Employment status and date of joining -->
+      <div class="form-fields-container max-sm:flex-col">
+        <div class="flex-1 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Work location</mat-label>
+            <input type="text" aria-label="Number" matInput [matAutocomplete]="workLocationAuto">
+            <mat-autocomplete #workLocationAuto="matAutocomplete">
+              <mat-option value="Chennai">Chennai</mat-option>
+              <mat-option value="Madurai">Madurai</mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
+        <div class="flex-1 sm:ml-16 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select>
+              <mat-option value="one">Male</mat-option>
+              <mat-option value="two">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- Employment status and date of joining-->
+      <div>
+        Contact details
+      </div>
+      <div>
+        Address
+      </div>
+  
+      <!-- Address line one and two -->
+      <div class="flex-1 mt-16">
+        <mat-form-field class="w-full" appearance="outline">
+          <mat-label>Address line one </mat-label>
+          <!-- placeholder="Placeholder" -->
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <div class="flex-1 mt-16">
+        <mat-form-field class="w-full" appearance="outline">
+          <mat-label>Address line two </mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+      <!-- Address line one and two -->
+  
+      <!-- city and county -->
+      <div class="form-fields-container max-sm:flex-col">
+        <div class="flex-1 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>City</mat-label>
+            <!-- placeholder="Placeholder" -->
+            <input matInput>
+          </mat-form-field>
+        </div>
+        <div class="flex-1 sm:ml-16 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>County</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- city and county -->
+  
+  
+          <!-- Country and post code -->
+          <div class="form-fields-container max-sm:flex-col">
+            <div class="flex-1 mt-16">
+              <mat-form-field class="w-full" appearance="outline">
+                <mat-label>Country</mat-label>
+                <input type="text" aria-label="Number" matInput [matAutocomplete]="countryAuto">
+                <mat-autocomplete #countryAuto="matAutocomplete">
+                  <mat-option value="India">India</mat-option>
+                  <mat-option value="America">America</mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+            </div>
+            <div class="flex-1 sm:ml-16 mt-16">
+              <mat-form-field class="w-full" appearance="outline">
+                <mat-label>post code</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+          </div>
+          <!-- Country and post code -->
+  
+          Contact number
+              <!-- mobile number and personal email -->
+      <div class="form-fields-container max-sm:flex-col">
+        <div class="flex-1 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Mobile number</mat-label>
+            <!-- placeholder="Placeholder" -->
+            <input matInput>
+          </mat-form-field>
+        </div>
+        <div class="flex-1 sm:ml-16 mt-16">
+          <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Personal email</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- mobile number and personal email -->
+  
+      Dependent detais
+      <button mat-raised-button color="accent" (click)="openAddDependentDialog()">Add Dependent Details</button>
+  
+    </form>
+  
+  
+  
+  </div>

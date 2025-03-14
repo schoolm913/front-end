@@ -1,0 +1,45 @@
+<div mat-dialog-title class="w-full h-64">
+    Add dependent details
+</div>
+<mat-divider></mat-divider>
+<mat-dialog-content>
+    <form action>
+        <mat-form-field class="w-full mb-16" appearance="outline">
+            <mat-label>Name</mat-label>
+            <!-- placeholder="Placeholder" -->
+            <input matInput>
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field class="w-full mb-16" appearance="outline">
+            <mat-label>Relationship</mat-label>
+            <input type="text" aria-label="Number" matInput [matAutocomplete]="roleAuto">
+            <mat-autocomplete #roleAuto="matAutocomplete">
+                <mat-option value="Admin">Son</mat-option>
+                <mat-option value="Employee">Doughter</mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field class="w-full mb-16" appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select>
+                <mat-option value="one">Male</mat-option>
+                <mat-option value="two">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Date of birth</mat-label>
+            <input matInput [matDatepicker]="picker" />
+            <!-- (dateInput)="addEvent('input', $event)"
+              (dateChange)="addEvent('change', $event)" -->
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+    </form>
+</mat-dialog-content>
+<mat-divider></mat-divider>
+<mat-dialog-actions>
+    <button mat-raised-button color="accent">Submit</button>
+    <button mat-raised-button color="warn">Cancel</button>
+</mat-dialog-actions>
