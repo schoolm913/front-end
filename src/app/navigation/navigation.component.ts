@@ -32,13 +32,13 @@ export class NavigationComponent {
       // ]
     },
     {
-      name: 'Stafes',
+      name: 'Staff',
       icon: 'home',
       path: ['/teacher'],
       expanded: false,
       subMenu: [
       {
-        name: "Stafes details",
+        name: "Staff details",
         icon: 'home',
         path: ['teachers', 'staff-details']
       }
